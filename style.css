@@ -14,7 +14,7 @@
     --sideBGColor: #040b14;
     --themeColor: #00A78E;
     --iconBGColor: #2C2F3F;
-    --textColor: #525252;
+    --textColor: #353535;
     --bgColor: #F7F7F7;
 }
 
@@ -248,11 +248,11 @@ main{
     background-color: var(--themeColor);
     border-radius: 3px;
 }
-#about .divider ~ p{
+.sub-para{
     color: var(--textColor);
     font-size: 15px;
     letter-spacing: 0.4px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 15px;
 }
 
@@ -356,4 +356,58 @@ main{
         width: 90%;
     }
 }
+
 /* === About Section End === */
+
+/* -------------------------------------- */
+
+/* === Facts Section Start === */
+#fact{
+    padding: 50px 30px;
+    background-color: white;
+}
+#fact .fact-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+#fact .fact-row .fact-box i{
+    color: var(--themeColor);
+    font-size: 40px;
+}
+#fact .fact-row .fact-box strong{
+    color: var(--sideBGColor);
+    font-size: 30px;
+    margin-left: 5px;
+    font-weight: 600;
+}
+#fact .fact-row .fact-box p{
+    color: var(--textColor);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 700px){
+    #fact{
+        padding: 40px 15px;
+    }
+    #fact .fact-row{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+@media only screen and (max-width: 370px){
+    #fact .fact-row .fact-box i{
+        font-size: 30px;
+    }
+    #fact .fact-row .fact-box strong{
+        font-size: 20px;
+    }
+    #fact .fact-row .fact-box p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+}
+/* === Facts Section End === */
