@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Global Variables */
@@ -44,7 +45,7 @@ header .profile img{
 }
 header .profile h1{
     color: white;
-    font-weight: 600;
+    font-weight: 400;
 }
 header .profile .social-icons a{
     display: inline-block;
@@ -689,3 +690,168 @@ main{
     }
 }
 /* === Portfolio Section End === */
+
+/* ------------------------------------------------------------------ */
+
+/* === Services Section Start === */
+#service{
+    padding: 70px 30px;
+    background-color: white;
+}
+#service .service-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+#service .service-row .service-box{
+    display: flex;
+    gap: 20px;
+}
+#service .service-row .service-box .icon i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--themeColor);
+    font-size: 22px;
+    line-height: 46px;
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+    transition: 0.7s;
+    text-align: center;
+}
+#service .service-row .service-box:hover .icon i{
+    color: var(--themeColor);
+    background-color: var(--bgColor);
+}
+#service .service-row .service-box .ser-info h4{
+    color: var(--sideBGColor);
+    font-size: 20px;
+    font-weight: 600;
+}
+#service .service-row .service-box .ser-info h4 + p{
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 850px){
+    #service{
+        padding: 50px 15px;
+    }
+    #service .service-row{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+}
+@media only screen and (max-width: 550px){
+    #service .service-row{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
+/* === Services Section End === */
+
+/* ----------------------------------------------------------------- */
+
+/* === Contact Section Start === */
+#contact{
+    padding: 70px 30px;
+}
+#contact .contact-row{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+#contact .contact-row .contact-left{
+    flex-basis: 40%;
+    min-width: 40%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    border-radius: 4px;
+    padding: 30px;
+}
+#contact .contact-row .contact-left .icon-box{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+#contact .contact-row .contact-left .icon-box .icon i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--themeColor);
+    text-align: center;
+    line-height: 47px;
+    font-size: 20px;
+    color: var(--themeColor);
+    transition: 0.5s;
+}
+#contact .contact-row .contact-left .icon-box:hover .icon i{
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+}
+#contact .contact-row .contact-left .icon-box .info h4{
+    font-size: 20px;
+    color: var(--sideBGColor);
+    font-weight: 600;
+}
+#contact .contact-row .contact-left .icon-box .info h4 + p{
+    color: var(--textColor);
+    font-size: 15px;
+    font-weight: 500;
+}
+#contact .contact-row .contact-right{
+    flex-basis: 60%;
+    min-width: 60%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    border-radius: 4px;
+    padding: 30px;
+}
+#contact .contact-row .contact-right form input,
+#contact .contact-row .contact-right form textarea{
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--textColor);
+    padding: 10px 20px;
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+    transition: 0.5s;
+}
+#contact .contact-row .contact-right form input:focus,
+#contact .contact-row .contact-right form textarea:focus{
+    border: 2px solid var(--themeColor);
+}
+#contact .contact-row .contact-right form input[type=submit]{
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+    border: 2px solid var(--themeColor);
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+/* Mobile View */
+@media only screen and (max-width: 800px){
+    #contact{
+        padding: 50px;
+    }
+    #contact .contact-row{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 500px){
+    #contact{
+        padding: 50px 10px;
+    }
+}
+/* === Contact Section End === */
