@@ -627,7 +627,7 @@ main{
 #portfolio .port-row .port-item .port-info h4{
     color: var(--bgColor);
     font-size: 25px;
-    font-weight: 600;;
+    font-weight: 600;
 }
 #portfolio .port-row .port-item .port-info h4 + p{
     color: var(--bgColor);
@@ -651,13 +651,44 @@ main{
 }
 
 /* Mobile View */
+@media only screen and (max-width: 950px){
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 800px){
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 15px;
+        font-weight: 400;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 12px;
+    }
+}
 @media only screen and (max-width: 650px){
     #portfolio{
-        padding: 50 10;
+        padding: 50px 10px;
     }
     #portfolio .port-row{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 15px;
+    }
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 25px;
+        font-weight: 600;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 15px;
     }
 }
 @media only screen and (max-width: 350px){
