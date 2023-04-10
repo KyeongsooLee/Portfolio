@@ -691,10 +691,41 @@ main{
         font-size: 15px;
     }
 }
+@media only screen and (max-width: 550px){
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 15px;
+        font-weight: 500;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 460px){
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 13px;
+        font-weight: 400;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 10px;
+    }
+}
 @media only screen and (max-width: 350px){
     #portfolio .port-row{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
+    }
+    #portfolio .port-row .port-item .port-info h4{
+        color: var(--bgColor);
+        font-size: 25px;
+        font-weight: 600;
+    }
+    #portfolio .port-row .port-item .port-info h4 + p{
+        color: var(--bgColor);
+        font-size: 15px;
     }
 }
 /* === Portfolio Section End === */
