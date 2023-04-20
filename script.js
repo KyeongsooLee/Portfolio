@@ -41,7 +41,11 @@ window.addEventListener('scroll', function(){
 
 
 // EmailJS initialization
-emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
+// Save the values from GitHub Secrets to variables
+const emailjsPublicKey = '<%=process.env.EMAILJS_PUBLIC_KEY%>';
+const emailjsServiceID = '<%=process.env.EMAILJS_SERVICE_ID%>';
+const emailjsTemplateID = '<%=process.env.EMAILJS_TEMPLATE_ID%>';
+emailjs.init(emailjsPublicKey);
 
 // Function to handle form submission
 function sendEmail(event) {
@@ -69,7 +73,7 @@ function sendEmail(event) {
   };
   
   // Send the email using EmailJS
-  emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams)
+  emailjs.send(emailjsServiceID, emailjsTemplateID, templateParams)
   .then(function(response) {
     alert('Email sent successfully!');
     // Clear the form fields
