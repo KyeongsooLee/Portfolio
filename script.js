@@ -41,7 +41,7 @@ window.addEventListener('scroll', function(){
 
 
 // EmailJS initialization
-emailjs.init('jl75OLLxs41kW2E_G');
+emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
 
 // Function to handle form submission
 function sendEmail(event) {
@@ -69,7 +69,7 @@ function sendEmail(event) {
   };
   
   // Send the email using EmailJS
-  emailjs.send('service_cqecci6', 'template_r918mm8', templateParams)
+  emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams)
   .then(function(response) {
     alert('Email sent successfully!');
     // Clear the form fields
